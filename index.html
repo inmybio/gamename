@@ -1,109 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Your Platform</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f7f7f7;
-            color: #333;
-        }
-
-        h1 {
-            font-size: 36px;
-            color: #1e87f0; /* Blue color for header */
-        }
-
-        .platform-button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 24px;
-            color: #fff;
-            background-color: #1e87f0; /* Blue color for buttons */
-            border: 2px solid #1e87f0; /* Blue border for buttons */
-            border-radius: 10px;
-            margin: 20px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        #hidden-header {
-            display: none;
-            font-size: 24px;
-            color: #1e87f0; /* Blue color for hidden header */
-            margin-top: 0;
-        }
-
-        #hidden-image {
-            display: none;
-            width: 100%; /* Set width to 100% */
-            margin: 20px auto; /* Center the image */
-        }
-
-        #hidden-text {
-            display: none;
-            font-size: 18px;
-            color: #666;
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blank Website</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
 </head>
 <body>
-    <h1>Choose Your Platform</h1>
-    <a href="#" class="platform-button" id="android" onclick="showContent('Android')">Android</a>
-    <a href="#" class="platform-button" id="ios" onclick="showContent('iOS')">iOS</a>
 
-    <h2 id="hidden-header">You have selected: <span id="selected-platform"></span></h2>
-    <img src="" alt="Selected Platform Image" id="hidden-image">
-    <p id="hidden-text">Additional text goes here.</p>
+<iframe src="https://embeds.beehiiv.com/964a07c0-cfd9-44b3-8a96-ddef63c71cdc" data-test-id="beehiiv-embed" width="100%" height="320" frameborder="0" scrolling="no" style="border-radius: 4px; border: 2px solid #e5e7eb; margin: 0; background-color: transparent;"></iframe>
 
-    <script>
-        function showContent(platform) {
-            // Show the hidden header with selected platform text
-            document.getElementById('hidden-header').style.display = 'block';
-            document.getElementById('selected-platform').innerText = platform;
-
-            // Show the hidden image
-            var hiddenImage = document.getElementById('hidden-image');
-            hiddenImage.style.display = 'block';
-
-            // Update image based on the selected platform
-            switch (platform) {
-                case 'Android':
-                    hiddenImage.src = 'https://i.ibb.co/3YwSSKC/IMG-2742.jpg'; // Replace with Android image URL
-                    break;
-                case 'iOS':
-                    hiddenImage.src = 'https://i.ibb.co/XkCj0Kh/IMG-2745.jpg'; // Replace with iOS image URL
-                    break;
-                default:
-                    hiddenImage.src = ''; // Default image URL
-                    break;
-            }
-
-            // Show the hidden text and update it based on the selected platform
-            var hiddenText = document.getElementById('hidden-text');
-            hiddenText.style.display = 'block';
-
-            // Update text based on the selected platform
-            switch (platform) {
-                case 'Android':
-                    hiddenText.innerHTML = 'Or <a href="https://play.google.com/store/apps/details?id=com.dijayko.Letter&hl=en_US&gl=US" target="_blank" style="color: #1e87f0;">click here</a> to visit the Google Play Store.';
-                    break;
-                case 'iOS':
-                    hiddenText.innerHTML = 'Or <a href="https://apps.apple.com/us/app/the-impossible-letter-game/id852152318" target="_blank" style="color: #1e87f0;">click here</a> to visit the App Store.';
-                    break;
-                default:
-                    hiddenText.innerText = 'Additional text goes here.';
-                    break;
-            }
-        }
-       
-    </script>
 </body>
-    
 </html>
